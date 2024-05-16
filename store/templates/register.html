@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Register</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Register your account..</p>
+        </div>
+    </div>
+</header>
+<br><br>
+<form method="POST" action="{% url 'register' %}">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-secondary">Signup</button>
+    
+  </form>
+
+  {% if form.errors %}
+    <div class="errors">
+        <ul>
+            {% for field, errors in form.errors.items %}
+                <li>{{ field }}:
+                    <ul>
+                        {% for error in errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+
+  {% endblock %}

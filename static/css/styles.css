@@ -1,0 +1,43 @@
+.form-control:focus, .btn:focus {
+    box-shadow: none;
+  }
+  .navbar-nav {
+    flex-grow: 1;
+  }
+  .navbar-collapse {
+    justify-content: space-between;
+  }
+  .container-fluid {
+    display: flex;
+    align-items: center;
+  }
+  .dropdown-toggle::after {
+    display: none !important;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #000; /* Change this to your desired color */
+  }
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    color: #007bff; /* Change this to your desired hover/focus color */
+  }
+  .navbar-brand {
+    color: #000; /* Change this to your desired brand color */
+  }
+  .navbar-brand:hover,
+  .navbar-brand:focus {
+    color: #007bff; /* Change this to your desired hover/focus color for brand */
+  }
+  .navbar .bi {
+    color: #000; /* Change this to your desired icon color */
+  }
+  .navbar .bi:hover,
+  .navbar .bi:focus {
+    color: #007bff; /* Change this to your desired hover/focus color for icons */
+  }
+  
+  .d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+  }
