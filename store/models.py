@@ -33,6 +33,12 @@ class Product(models.Model):
     image = models.ImageField(upload_to="uploads/product/")
     is_sale = models.BooleanField(default=False)
     sale_price = models.DecimalField(max_digits=10, decimal_places=2,default=0)
+    brand = models.CharField(max_length=50, null=True, blank=True)
+    rating = models.DecimalField(max_digits=2,decimal_places=2, default=0)
+    review_count = models.DecimalField(max_digits=100000000, decimal_places=0,default=0)
+    color = models.CharField(max_length=50, null=True, blank=True)
+
+
 
     @property 
     def image_url(self):
